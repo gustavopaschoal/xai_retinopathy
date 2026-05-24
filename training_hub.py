@@ -287,7 +287,7 @@ def build_model(architecture: str,
         weights="imagenet",
         input_shape=input_shape,
     )
-    backbone.trainable = False
+    backbone.trainable = True
 
     inputs = keras.Input(shape=input_shape)
     x = backbone(inputs, training=False)
